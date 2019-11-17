@@ -19,9 +19,7 @@ function whatsapp() {
       return;
     }
 
-    if (
-      e.innerText.search(/((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))/) < 0
-    ) {
+    if (e.innerText.search(TIME_REGEX) < 0) {
       return;
     }
 

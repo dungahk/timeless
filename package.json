@@ -1,0 +1,38 @@
+{
+  "name": "timeless",
+  "version": "0.0.0-development",
+  "main": "index.js",
+  "repository": "git@github.com:dungahk/timeless.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon",
+    "build": "tsc -p tsconfig.json",
+    "lint": "tslint -p tsconfig.json",
+    "build:prod": "./build.sh"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.0.91",
+    "@types/node": "12.12.8",
+    "nodemon": "1.19.4",
+    "tslint": "5.20.1",
+    "typescript": "3.7.2",
+    "uglify-js": "3.6.9"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "ts,css,json",
+    "ignore": [
+      "dist/*",
+      "src/**/*.js",
+      ".git",
+      "node_modules"
+    ],
+    "exec": "yarn build:prod"
+  },
+  "volta": {
+    "node": "12.13.0",
+    "yarn": "1.19.1"
+  }
+}

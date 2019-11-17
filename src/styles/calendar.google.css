@@ -1,0 +1,3 @@
+div[role="gridcell"]>div[aria-hidden="true"] {
+  display: none;
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Timeless",
+  "description": "Hide time information from websites",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "page_action": {
+    "default_icon": {
+      "16": "timeless.png",
+      "32": "timeless.png",
+      "48": "timeless.png",
+      "128": "timeless.png"
+    }
+  },
+  "icons": {
+    "16": "timeless.png",
+    "32": "timeless.png",
+    "48": "timeless.png",
+    "128": "timeless.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://app.slack.com/*",
+        "https://calendar.google.com/*",
+        "https://mail.google.com/*"
+      ],
+      "js": ["timeless-content.js"],
+      "css": ["timeless.css"]
+    }
+  ]
+}

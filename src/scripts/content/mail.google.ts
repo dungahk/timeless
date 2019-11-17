@@ -1,5 +1,3 @@
-Array.from(document.querySelectorAll('td > span > span'));
-
 function gmail() {
   const inbox = Array.from(
     document.querySelectorAll<HTMLSpanElement>('td > span > span'),
